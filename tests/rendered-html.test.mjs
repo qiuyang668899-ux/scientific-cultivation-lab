@@ -23,6 +23,8 @@ test("renders the scientific cultivation laboratory shell", async () => {
   assert.match(html, /以科学为径/);
   assert.match(html, /向未知修行/);
   assert.match(html, /今日实验台/);
+  assert.match(html, /完整主视觉海报/);
+  assert.match(html, /品牌原点/);
   assert.match(html, /体验保持开放/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|SkeletonPreview/);
 });
@@ -41,6 +43,8 @@ test("contains the complete interactive research toolkit", async () => {
   assert.match(page, /exportData/);
   assert.match(css, /prefers-reduced-motion/);
   assert.match(css, /@media \(max-width:560px\)/);
+  assert.match(css, /background-size:contain/);
+  assert.match(css, /brush-fragment/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
 });
 

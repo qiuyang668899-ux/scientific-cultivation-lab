@@ -217,10 +217,14 @@ export default function Home() {
                   <button className="text-button" onClick={() => switchView("hypotheses")}>进入假设库</button>
                 </div>
               </div>
-              <div className="poster" role="img" aria-label="科学修仙实验室水墨品牌视觉">
-                <div className="poster-orbit"><span /></div>
-                <div className="poster-seal">假<br />设</div>
-                <p>科学为径 · 修行为法</p>
+              <div className="poster-stage">
+                <div className="poster" role="img" aria-label="科学修仙实验室完整主视觉海报" />
+                <div className="poster-notes" aria-hidden="true">
+                  <span>BRAND KEY VISUAL</span>
+                  <b>主视觉<br />完整呈现</b>
+                  <i />
+                  <small>SCIENCE<br />CULTIVATION<br />LABORATORY</small>
+                </div>
               </div>
             </section>
 
@@ -230,6 +234,16 @@ export default function Home() {
               <div className="metric"><span>完整时长</span><b>60<small> MIN</small></b></div>
               <div className="metric"><span>风险等级</span><b className="safe">低</b></div>
               <button className="round" onClick={() => switchView("practice")} aria-label="开始实验">↗</button>
+            </section>
+
+            <section className="brand-origin" aria-label="主视觉毛笔字元素">
+              <div className="brush-fragment" role="img" aria-label="主视觉中的科学修仙毛笔字" />
+              <div className="brand-origin-copy">
+                <div className="section-kicker"><span>KV</span> 品牌原点</div>
+                <h2>保留一笔一势的<br />探索精神</h2>
+                <p>“科学修仙”沿用主 KV 原生毛笔字，在理性的实验界面中保留东方修行的气韵。它既是标题，也是实验室持续追问未知的精神印记。</p>
+                <div className="brand-axis"><span>科学为径</span><i /><span>修行为法</span><i /><span>验证为尺</span></div>
+              </div>
             </section>
 
             <section className="dashboard-grid">

@@ -33,8 +33,8 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 .page { animation:reveal .35s ease; }
 @keyframes reveal { from{opacity:0;transform:translateY(5px)} to{opacity:1;transform:none} }
 
-.hero { min-height:550px; display:grid; grid-template-columns:1.04fr .96fr; border-bottom:1px solid var(--line); overflow:hidden; }
-.hero-copy { padding:76px 48px 52px; position:relative; }
+.hero { min-height:720px; display:grid; grid-template-columns:.88fr 1.12fr; border-bottom:1px solid var(--line); overflow:hidden; }
+.hero-copy { padding:96px 48px 64px; position:relative; align-self:center; }
 .hero-copy::after { content:"01"; position:absolute; right:24px; top:25px; color:rgba(23,23,20,.07); font:94px/1 Georgia,serif; }
 .eyebrow { color:var(--gold); font-size:10px; letter-spacing:.25em; margin:0 0 27px; }
 .hero h1 { font-family:"Songti SC","STSong",serif; font-weight:400; font-size:clamp(48px,5vw,74px); line-height:1.18; letter-spacing:.08em; margin:0; }
@@ -45,14 +45,13 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 .hero-actions button:first-child { border:0; color:#f5f2e9; background:var(--ink); padding:15px 20px; min-width:170px; text-align:left; display:flex; justify-content:space-between; }
 .hero-actions button:first-child:hover { background:var(--red); }
 .text-button { border:0; border-bottom:1px solid var(--ink); background:transparent; padding:5px 0; font-size:12px; }
-.poster { min-height:550px; background:linear-gradient(90deg,var(--paper) 0%,rgba(241,240,234,.08) 23%),linear-gradient(180deg,rgba(240,239,232,.05),rgba(13,13,12,.28)),var(--kv-poster-url,url('/kv-poster.png')) center 49%/cover; position:relative; overflow:hidden; }
-.poster::after { content:""; position:absolute; inset:0; border-left:1px solid var(--line); }
-.poster>p { position:absolute; right:26px; bottom:24px; margin:0; writing-mode:vertical-rl; color:rgba(255,255,255,.85); font-family:"Songti SC",serif; letter-spacing:.25em; }
-.poster-seal { position:absolute; top:28px; right:28px; z-index:2; border:1px solid rgba(167,67,47,.75); color:#9b3d2c; padding:6px 5px; font:12px/1.2 "Songti SC",serif; }
-.poster-orbit { position:absolute; width:178px; height:178px; border:1px solid rgba(255,255,255,.32); border-radius:50%; left:50%; top:18%; transform:translateX(-50%); }
-.poster-orbit::before,.poster-orbit::after { content:""; position:absolute; inset:18px -28px; border:1px solid rgba(255,255,255,.22); border-radius:50%; transform:rotate(60deg); }
-.poster-orbit::after { transform:rotate(-60deg); }
-.poster-orbit span { position:absolute; width:10px; height:10px; background:#fff; box-shadow:0 0 20px #fff; border-radius:50%; left:50%; top:50%; transform:translate(-50%,-50%); }
+.poster-stage { min-height:720px; padding:24px 24px 24px 34px; display:grid; grid-template-columns:minmax(260px,1fr) 88px; gap:22px; align-items:center; background:#1d1c18; border-left:1px solid var(--line); }
+.poster { width:min(100%,376px); aspect-ratio:941/1672; justify-self:center; background-color:#d8d6ce; background-image:var(--kv-poster-url,url('/kv-poster.png')); background-position:center; background-size:contain; background-repeat:no-repeat; box-shadow:0 24px 70px rgba(0,0,0,.42); }
+.poster-notes { align-self:stretch; padding:28px 0; color:rgba(241,240,234,.7); display:flex; flex-direction:column; align-items:center; }
+.poster-notes span { writing-mode:vertical-rl; font:8px/1 Georgia,serif; letter-spacing:.2em; }
+.poster-notes b { margin-top:34px; writing-mode:vertical-rl; font:400 13px/1.75 "Songti SC",serif; letter-spacing:.2em; color:#f0eee6; }
+.poster-notes i { flex:1; width:1px; min-height:44px; margin:24px 0; background:rgba(241,240,234,.18); }
+.poster-notes small { font:7px/1.9 Georgia,serif; letter-spacing:.08em; text-align:center; color:rgba(241,240,234,.42); }
 
 .lab-strip { min-height:126px; display:grid; grid-template-columns:170px minmax(270px,1fr) 140px 120px 56px; align-items:stretch; padding:0 48px; border-bottom:1px solid var(--line); }
 .lab-strip>div { padding:26px 22px; border-right:1px solid rgba(23,23,20,.1); display:flex; flex-direction:column; justify-content:center; }
@@ -66,6 +65,14 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 .metric .safe { color:var(--green); font-family:"Songti SC",serif; }
 .round { align-self:center; width:42px; height:42px; border-radius:50%; border:1px solid var(--ink); background:transparent; font-size:18px; }
 .round:hover { background:var(--ink); color:white; }
+.brand-origin { min-height:360px; margin:34px 48px 0; display:grid; grid-template-columns:280px minmax(0,1fr); border:1px solid var(--line); background:rgba(255,255,255,.18); overflow:hidden; }
+.brush-fragment { width:230px; height:360px; justify-self:center; background-image:var(--kv-poster-url,url('/kv-poster.png')); background-repeat:no-repeat; background-size:520px auto; background-position:-158px -135px; mix-blend-mode:multiply; }
+.brand-origin-copy { padding:46px 52px; border-left:1px solid var(--line); display:flex; flex-direction:column; justify-content:center; position:relative; }
+.brand-origin-copy::after { content:"BRUSH / 01"; position:absolute; right:24px; top:22px; font:8px/1 Georgia,serif; letter-spacing:.18em; color:var(--muted); }
+.brand-origin-copy h2 { margin:22px 0 16px; font:400 clamp(28px,3.1vw,43px)/1.35 "Songti SC",serif; letter-spacing:.12em; }
+.brand-origin-copy>p { max-width:650px; margin:0; color:var(--muted); font:12px/1.95 "Songti SC",serif; letter-spacing:.06em; }
+.brand-axis { margin-top:28px; display:flex; align-items:center; gap:13px; color:var(--gold); font:10px/1 "Songti SC",serif; letter-spacing:.14em; }
+.brand-axis i { width:30px; height:1px; background:var(--gold); opacity:.45; }
 .dashboard-grid { padding:34px 48px 0; display:grid; grid-template-columns:1.3fr .85fr .85fr; gap:16px; }
 .ink-card { min-height:210px; border:1px solid var(--line); padding:24px; background:rgba(255,255,255,.18); }
 .section-kicker { font-size:10px; letter-spacing:.16em; color:var(--muted); }
@@ -237,6 +244,10 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 
 @media (max-width:1050px) {
   .app-shell { grid-template-columns:204px minmax(0,1fr); }
+  .hero { grid-template-columns:.82fr 1.18fr; }
+  .poster-stage { grid-template-columns:minmax(240px,1fr) 58px; padding-left:22px; gap:12px; }
+  .brand-origin { grid-template-columns:240px minmax(0,1fr); }
+  .brand-origin-copy { padding:38px 34px; }
   .dashboard-grid { grid-template-columns:1fr 1fr; }
   .mission-card { grid-column:1/3; }
   .hypothesis-grid { grid-template-columns:1fr 1fr; }
@@ -252,10 +263,14 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
   .date { display:none; }
   .hero { grid-template-columns:1fr; }
   .hero-copy { padding:58px 28px; }
-  .poster { min-height:410px; }
+  .poster-stage { min-height:680px; grid-template-columns:minmax(260px,1fr) 70px; padding:28px; }
+  .poster { width:min(100%,350px); }
   .lab-strip { padding:0 28px; grid-template-columns:1fr 1fr; }
   .lab-strip .protocol { grid-column:1/3; border-bottom:1px solid var(--line); }
   .lab-strip .round { display:none; }
+  .brand-origin { margin:28px 28px 0; grid-template-columns:220px minmax(0,1fr); }
+  .brush-fragment { width:190px; height:330px; background-size:470px auto; background-position:-143px -122px; }
+  .brand-origin-copy { padding:32px 28px; }
   .dashboard-grid { padding:28px 28px 0; }
   .principles { padding:28px; grid-template-columns:1fr 1fr; }
   .principles>p { grid-column:1/3; }
@@ -286,9 +301,23 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
   .hero-copy { padding:45px 20px 50px; }
   .hero h1 { font-size:43px; }
   .hero-actions { align-items:flex-start; flex-direction:column; }
-  .poster { min-height:335px; }
+  .poster-stage { min-height:auto; grid-template-columns:1fr; padding:20px; gap:16px; }
+  .poster { width:min(82vw,330px); }
+  .poster-notes { padding:0; flex-direction:row; justify-content:center; gap:16px; }
+  .poster-notes span,.poster-notes b { writing-mode:horizontal-tb; margin:0; }
+  .poster-notes b { font-size:10px; }
+  .poster-notes i { flex:0 0 34px; min-height:1px; height:1px; margin:0; }
+  .poster-notes small { display:none; }
   .lab-strip { padding:0 20px; }
   .lab-strip>div { padding:22px 12px; }
+  .brand-origin { min-height:300px; margin:20px 20px 0; grid-template-columns:145px minmax(0,1fr); }
+  .brush-fragment { width:145px; height:300px; background-size:420px auto; background-position:-128px -109px; }
+  .brand-origin-copy { padding:28px 18px; }
+  .brand-origin-copy::after { display:none; }
+  .brand-origin-copy h2 { margin:16px 0 12px; font-size:25px; }
+  .brand-origin-copy>p { font-size:10px; line-height:1.8; }
+  .brand-axis { margin-top:18px; align-items:flex-start; flex-direction:column; gap:7px; }
+  .brand-axis i { display:none; }
   .dashboard-grid { padding:20px 20px 0; grid-template-columns:1fr; }
   .mission-card { grid-column:auto; }
   .principles { padding:26px 20px; grid-template-columns:1fr; }
