@@ -43,3 +43,11 @@ test("contains the complete interactive research toolkit", async () => {
   assert.match(css, /@media \(max-width:560px\)/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
 });
+
+test("builds a GitHub Pages entry with public asset URLs", async () => {
+  const html = await readFile(new URL("../pages-dist/index.html", import.meta.url), "utf8");
+  assert.match(html, /<div id="root"><\/div>/);
+  assert.match(html, /\/scientific-cultivation-lab\/assets\//);
+  assert.match(html, /qiuyang668899-ux\.github\.io\/scientific-cultivation-lab/);
+  assert.doesNotMatch(html, /localhost/);
+});

@@ -45,7 +45,7 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 .hero-actions button:first-child { border:0; color:#f5f2e9; background:var(--ink); padding:15px 20px; min-width:170px; text-align:left; display:flex; justify-content:space-between; }
 .hero-actions button:first-child:hover { background:var(--red); }
 .text-button { border:0; border-bottom:1px solid var(--ink); background:transparent; padding:5px 0; font-size:12px; }
-.poster { min-height:550px; background:linear-gradient(90deg,var(--paper) 0%,rgba(241,240,234,.08) 23%),linear-gradient(180deg,rgba(240,239,232,.05),rgba(13,13,12,.28)),url('/kv-poster.png') center 49%/cover; position:relative; overflow:hidden; }
+.poster { min-height:550px; background:linear-gradient(90deg,var(--paper) 0%,rgba(241,240,234,.08) 23%),linear-gradient(180deg,rgba(240,239,232,.05),rgba(13,13,12,.28)),var(--kv-poster-url,url('/kv-poster.png')) center 49%/cover; position:relative; overflow:hidden; }
 .poster::after { content:""; position:absolute; inset:0; border-left:1px solid var(--line); }
 .poster>p { position:absolute; right:26px; bottom:24px; margin:0; writing-mode:vertical-rl; color:rgba(255,255,255,.85); font-family:"Songti SC",serif; letter-spacing:.25em; }
 .poster-seal { position:absolute; top:28px; right:28px; z-index:2; border:1px solid rgba(167,67,47,.75); color:#9b3d2c; padding:6px 5px; font:12px/1.2 "Songti SC",serif; }
