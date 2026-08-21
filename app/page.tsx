@@ -219,12 +219,6 @@ export default function Home() {
               </div>
               <div className="poster-stage">
                 <div className="poster" role="img" aria-label="科学修仙实验室完整主视觉海报" />
-                <div className="poster-notes" aria-hidden="true">
-                  <span>BRAND KEY VISUAL</span>
-                  <b>主视觉<br />完整呈现</b>
-                  <i />
-                  <small>SCIENCE<br />CULTIVATION<br />LABORATORY</small>
-                </div>
               </div>
             </section>
 
@@ -236,12 +230,12 @@ export default function Home() {
               <button className="round" onClick={() => switchView("practice")} aria-label="开始实验">↗</button>
             </section>
 
-            <section className="brand-origin" aria-label="主视觉毛笔字元素">
-              <div className="brush-fragment" role="img" aria-label="主视觉中的科学修仙毛笔字" />
+            <section className="brand-origin" aria-label="科学修仙研究序言">
+              <div className="brush-fragment" role="img" aria-label="科学修仙水墨毛笔题字" />
               <div className="brand-origin-copy">
-                <div className="section-kicker"><span>KV</span> 品牌原点</div>
-                <h2>保留一笔一势的<br />探索精神</h2>
-                <p>“科学修仙”沿用主 KV 原生毛笔字，在理性的实验界面中保留东方修行的气韵。它既是标题，也是实验室持续追问未知的精神印记。</p>
+                <div className="section-kicker"><span>∞</span> 研究序言</div>
+                <h2>让真理自由生长<br />让文明持续进化</h2>
+                <p>保持开放，不急于相信，也不急于否定。以可重复的修习积累体验，以可证伪的实验校准判断，在未知面前始终保留好奇、理性与敬畏。</p>
                 <div className="brand-axis"><span>科学为径</span><i /><span>修行为法</span><i /><span>验证为尺</span></div>
               </div>
             </section>

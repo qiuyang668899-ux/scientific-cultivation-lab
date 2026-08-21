@@ -24,7 +24,8 @@ test("renders the scientific cultivation laboratory shell", async () => {
   assert.match(html, /向未知修行/);
   assert.match(html, /今日实验台/);
   assert.match(html, /完整主视觉海报/);
-  assert.match(html, /品牌原点/);
+  assert.match(html, /研究序言/);
+  assert.doesNotMatch(html, /BRAND KEY VISUAL|主视觉完整呈现|品牌原点|BRUSH \/ 01/);
   assert.match(html, /体验保持开放/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|SkeletonPreview/);
 });

@@ -45,13 +45,8 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 .hero-actions button:first-child { border:0; color:#f5f2e9; background:var(--ink); padding:15px 20px; min-width:170px; text-align:left; display:flex; justify-content:space-between; }
 .hero-actions button:first-child:hover { background:var(--red); }
 .text-button { border:0; border-bottom:1px solid var(--ink); background:transparent; padding:5px 0; font-size:12px; }
-.poster-stage { min-height:720px; padding:24px 24px 24px 34px; display:grid; grid-template-columns:minmax(260px,1fr) 88px; gap:22px; align-items:center; background:#1d1c18; border-left:1px solid var(--line); }
+.poster-stage { min-height:720px; padding:24px 34px; display:grid; place-items:center; background:#1d1c18; border-left:1px solid var(--line); }
 .poster { width:min(100%,376px); aspect-ratio:941/1672; justify-self:center; background-color:#d8d6ce; background-image:var(--kv-poster-url,url('/kv-poster.png')); background-position:center; background-size:contain; background-repeat:no-repeat; box-shadow:0 24px 70px rgba(0,0,0,.42); }
-.poster-notes { align-self:stretch; padding:28px 0; color:rgba(241,240,234,.7); display:flex; flex-direction:column; align-items:center; }
-.poster-notes span { writing-mode:vertical-rl; font:8px/1 Georgia,serif; letter-spacing:.2em; }
-.poster-notes b { margin-top:34px; writing-mode:vertical-rl; font:400 13px/1.75 "Songti SC",serif; letter-spacing:.2em; color:#f0eee6; }
-.poster-notes i { flex:1; width:1px; min-height:44px; margin:24px 0; background:rgba(241,240,234,.18); }
-.poster-notes small { font:7px/1.9 Georgia,serif; letter-spacing:.08em; text-align:center; color:rgba(241,240,234,.42); }
 
 .lab-strip { min-height:126px; display:grid; grid-template-columns:170px minmax(270px,1fr) 140px 120px 56px; align-items:stretch; padding:0 48px; border-bottom:1px solid var(--line); }
 .lab-strip>div { padding:26px 22px; border-right:1px solid rgba(23,23,20,.1); display:flex; flex-direction:column; justify-content:center; }
@@ -68,7 +63,6 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 .brand-origin { min-height:360px; margin:34px 48px 0; display:grid; grid-template-columns:280px minmax(0,1fr); border:1px solid var(--line); background:rgba(255,255,255,.18); overflow:hidden; }
 .brush-fragment { width:230px; height:360px; justify-self:center; background-image:var(--kv-poster-url,url('/kv-poster.png')); background-repeat:no-repeat; background-size:520px auto; background-position:-158px -135px; mix-blend-mode:multiply; }
 .brand-origin-copy { padding:46px 52px; border-left:1px solid var(--line); display:flex; flex-direction:column; justify-content:center; position:relative; }
-.brand-origin-copy::after { content:"BRUSH / 01"; position:absolute; right:24px; top:22px; font:8px/1 Georgia,serif; letter-spacing:.18em; color:var(--muted); }
 .brand-origin-copy h2 { margin:22px 0 16px; font:400 clamp(28px,3.1vw,43px)/1.35 "Songti SC",serif; letter-spacing:.12em; }
 .brand-origin-copy>p { max-width:650px; margin:0; color:var(--muted); font:12px/1.95 "Songti SC",serif; letter-spacing:.06em; }
 .brand-axis { margin-top:28px; display:flex; align-items:center; gap:13px; color:var(--gold); font:10px/1 "Songti SC",serif; letter-spacing:.14em; }
@@ -245,7 +239,7 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 @media (max-width:1050px) {
   .app-shell { grid-template-columns:204px minmax(0,1fr); }
   .hero { grid-template-columns:.82fr 1.18fr; }
-  .poster-stage { grid-template-columns:minmax(240px,1fr) 58px; padding-left:22px; gap:12px; }
+  .poster-stage { padding:24px; }
   .brand-origin { grid-template-columns:240px minmax(0,1fr); }
   .brand-origin-copy { padding:38px 34px; }
   .dashboard-grid { grid-template-columns:1fr 1fr; }
@@ -263,7 +257,7 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
   .date { display:none; }
   .hero { grid-template-columns:1fr; }
   .hero-copy { padding:58px 28px; }
-  .poster-stage { min-height:680px; grid-template-columns:minmax(260px,1fr) 70px; padding:28px; }
+  .poster-stage { min-height:680px; padding:28px; }
   .poster { width:min(100%,350px); }
   .lab-strip { padding:0 28px; grid-template-columns:1fr 1fr; }
   .lab-strip .protocol { grid-column:1/3; border-bottom:1px solid var(--line); }
@@ -301,19 +295,13 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
   .hero-copy { padding:45px 20px 50px; }
   .hero h1 { font-size:43px; }
   .hero-actions { align-items:flex-start; flex-direction:column; }
-  .poster-stage { min-height:auto; grid-template-columns:1fr; padding:20px; gap:16px; }
+  .poster-stage { min-height:auto; padding:20px; }
   .poster { width:min(82vw,330px); }
-  .poster-notes { padding:0; flex-direction:row; justify-content:center; gap:16px; }
-  .poster-notes span,.poster-notes b { writing-mode:horizontal-tb; margin:0; }
-  .poster-notes b { font-size:10px; }
-  .poster-notes i { flex:0 0 34px; min-height:1px; height:1px; margin:0; }
-  .poster-notes small { display:none; }
   .lab-strip { padding:0 20px; }
   .lab-strip>div { padding:22px 12px; }
   .brand-origin { min-height:300px; margin:20px 20px 0; grid-template-columns:145px minmax(0,1fr); }
   .brush-fragment { width:145px; height:300px; background-size:420px auto; background-position:-128px -109px; }
   .brand-origin-copy { padding:28px 18px; }
-  .brand-origin-copy::after { display:none; }
   .brand-origin-copy h2 { margin:16px 0 12px; font-size:25px; }
   .brand-origin-copy>p { font-size:10px; line-height:1.8; }
   .brand-axis { margin-top:18px; align-items:flex-start; flex-direction:column; gap:7px; }
